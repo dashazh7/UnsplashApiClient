@@ -1,6 +1,7 @@
 import Home from "@/views/Home.vue"
 import Saved from "@/views/Saved.vue"
 import Search from "@/views/Search.vue"
+import Information from "@/views/Information.vue"
 import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
@@ -20,6 +21,12 @@ const routes = [
         path: '/search',
         name: 'search',
         component: Search
+    },
+
+    {
+        path: '/info',
+        name: 'info',
+        component: Information
     }
 ]
 

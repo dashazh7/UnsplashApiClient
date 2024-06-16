@@ -6,36 +6,28 @@ const emit = defineEmits(['search'])
 
 <template>
 <div class="search">
-<!--  <input v-model="queryString" type="text" @change="emit('search')">-->
-  <input v-model="queryString" type="text">
-  <button @click="emit('search')">Search</button>
+  <input v-model="queryString" type="text" @change="emit('search')">
 </div>
 </template>
 
 <style scoped>
+
 .search {
   display: flex;
-  flex-grow: 1;
-  margin-right: 50px;
-  margin-left: 30px;
+  justify-content: center;
 }
 
 input {
-  flex-grow: 1;
-  padding: 3px;
-  font-size: 14px;
-  height: 30px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #F1F1F1;
+  width: 1000px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  padding: 10px 15px;
 }
 
-button {
-  margin-left: 10px;
-  padding: 2px 10px;
-  font-size: 14px;
-  height: 30px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-
-}
 </style>

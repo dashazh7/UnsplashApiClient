@@ -23,7 +23,7 @@ onBeforeMount(getDefaultPhotos)
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <header class="header">
       <div class="logo">Логотип</div>
       <Search v-model="query" @search="onSearch"/>
@@ -33,28 +33,41 @@ onBeforeMount(getDefaultPhotos)
         <router-link to="/info" class="link">Справка</router-link>
       </div>
     </header>
+
+    <div class="photo-grid">
+      <template v-for="image in images" :key="image.id">
+        <Card :id="image.id" :url="image.urls.regular"/>
+      </template>
+    </div>
   </div>
 
-  <div class="photo-grid">
-    <template v-for="image in images" :key="image.id">
-      <Card :id="image.id" :url="image.urls.regular"/>
-    </template>
-  </div>
 </template>
 
 <style scoped>
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .photo-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
   padding: 20px;
 }
 
 .header {
-  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .links {
@@ -63,9 +76,15 @@ onBeforeMount(getDefaultPhotos)
 }
 
 .link {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
   text-decoration: none;
   color: #000;
   font-size: 16px;
+}
+
+.router-link-active {
+  font-weight: bold;
 }
 
 </style>

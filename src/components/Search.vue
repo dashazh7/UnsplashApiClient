@@ -2,6 +2,7 @@
 const queryString = defineModel()
 
 const emit = defineEmits(['search'])
+
 </script>
 
 <template>

@@ -7,7 +7,7 @@ const emit = defineEmits(['search'])
 
 <template>
 <div class="search">
-  <input v-model="queryString" type="text" @change="emit('search')">
+  <input v-model="queryString" type="text" @change="emit('search')" placeholder="Поиск">
 </div>
 </template>
 

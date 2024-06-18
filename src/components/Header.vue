@@ -34,7 +34,7 @@ watch(() => route.name, (newValue) => { if (newValue === 'search') return;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px 20px;
   width: 100%;
 }
 

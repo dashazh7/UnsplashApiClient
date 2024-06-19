@@ -13,7 +13,6 @@ defineProps({
 <template>
 <div class="card" @mouseenter="isHover=true" @mouseleave="isHover=false">
   <img :src="url"/>
-<!--  <div class="over" v-if="isHover"></div>-->
   <ButtonHeart  v-if="isHover"></ButtonHeart>
 </div>
 </template>
@@ -47,6 +46,5 @@ img {
 .card:hover:before {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 </style>

@@ -13,7 +13,7 @@ defineProps({
 <template>
 <div class="card" @mouseenter="isHover=true" @mouseleave="isHover=false">
   <img :src="url"/>
-  <div class="over" v-if="isHover"> </div>
+<!--  <div class="over" v-if="isHover"></div>-->
   <ButtonHeart  v-if="isHover"></ButtonHeart>
 </div>
 </template>
@@ -32,15 +32,21 @@ img {
   border-radius: 8px;
 }
 
-.over {
-  display: block;
+.card:before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.3s background-color;
+}
+
+.card:hover:before {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
 
 </style>

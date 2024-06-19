@@ -2,6 +2,7 @@
 import Search from "@/components/Search.vue";
 import { useRoute, useRouter } from "vue-router";
 import {ref, watch} from "vue";
+import ButtonHeart from "@/components/ButtonHeart.vue";
 
 const router = useRouter();
 const query = ref("");
@@ -36,7 +37,7 @@ watch(() => route.name, (newValue) => { if (newValue === 'search') return;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 20px;
+  padding: 20px 20px;
   width: 100%;
 }
 
@@ -54,10 +55,9 @@ watch(() => route.name, (newValue) => { if (newValue === 'search') return;
   padding: 10px 15px;
 }
 
-.router-link-active {
-  background-color: #e46cbb;
+.left-links .router-link-active {
+  background-color: #EA526F;
   color: white;
-  border-radius: 20px;
-
+  border-radius: 15px;
 }
 </style>

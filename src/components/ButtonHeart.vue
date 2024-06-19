@@ -10,7 +10,7 @@ const changeColor = () => {
 }
 
 const color = computed(() => {
-  return isClicked.value ? 'red' :undefined
+  return isClicked.value ? '#EA526F' :undefined
 })
 </script>
 

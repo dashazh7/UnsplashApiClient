@@ -24,7 +24,7 @@ input {
   font-size: 16px;
   background-color: #F1F1F1;
   width: 1000px;
-  height: 40px;
+  height: 45px;
   border: none;
   border-radius: 7px;
   outline: none;

@@ -20,10 +20,12 @@ watch(() => route.name, (newValue) => { if (newValue === 'search') return;
 <template>
   <header class="header">
     <div class="logo">Логотип</div>
-    <Search v-model="query" @search="onSearch"/>
-    <div class="links">
+    <div class="links left-links">
       <router-link to="/" class="link">Главная</router-link>
       <router-link to="/saved" class="link">Избранное</router-link>
+    </div>
+    <Search v-model="query" @search="onSearch"/>
+    <div class="links right-links">
       <router-link to="/info" class="link">Справка</router-link>
     </div>
   </header>
@@ -40,7 +42,7 @@ watch(() => route.name, (newValue) => { if (newValue === 'search') return;
 
 .links {
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 
 .link {
@@ -49,9 +51,12 @@ watch(() => route.name, (newValue) => { if (newValue === 'search') return;
   text-decoration: none;
   color: #000;
   font-size: 16px;
+  padding: 7px 15px;
 }
 
 .router-link-active {
-  font-weight: bold;
+  background-color: #2c3e50;
+  border-radius: 12px;
+
 }
 </style>

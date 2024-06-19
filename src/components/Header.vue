@@ -1,6 +1,6 @@
 <script setup>
 import Search from "@/components/Search.vue";
-import {onBeforeRouteUpdate, useRoute, useRouter} from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import {ref, watch} from "vue";
 
 const router = useRouter();
@@ -51,12 +51,13 @@ watch(() => route.name, (newValue) => { if (newValue === 'search') return;
   text-decoration: none;
   color: #000;
   font-size: 16px;
-  padding: 7px 15px;
+  padding: 10px 15px;
 }
 
 .router-link-active {
-  background-color: #2c3e50;
-  border-radius: 12px;
+  background-color: #e46cbb;
+  color: white;
+  border-radius: 20px;
 
 }
 </style>

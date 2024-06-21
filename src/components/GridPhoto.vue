@@ -18,6 +18,8 @@ const itemsComputed = computed(() => {
 
   return chunks;
 });
+
+
 </script>
 
 <template>
@@ -26,7 +28,7 @@ const itemsComputed = computed(() => {
     <template v-for="(chunk, i) in itemsComputed" :key="i">
       <div class="column">
         <template v-for="image in chunk" :key="image.id">
-          <Card :id="image.id" :url="image.urls.regular"/>
+          <Card :unsplashId="image.id" :url="image.urls.regular"/>
         </template>
       </div>
     </template>

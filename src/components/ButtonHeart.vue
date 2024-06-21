@@ -1,21 +1,17 @@
 <script setup>
-import {computed, ref} from 'vue';
+import {computed} from 'vue';
 
 import IconHeart from "@/components/icons/IconHeart.vue";
 
-const isClicked = ref(false)
-
-const changeColor = () => {
-  isClicked.value = !isClicked.value;
-}
+const isFavorite = defineModel("isFavorite")
 
 const color = computed(() => {
-  return isClicked.value ? '#EA526F' :undefined
+  return isFavorite.value ? '#EA526F' :undefined
 })
 </script>
 
 <template>
-  <button @click="changeColor">
+  <button>
     <IconHeart class="btn-icon" :fill="color" :stroke="color"></IconHeart>
   </button>
 </template>

@@ -29,11 +29,3 @@ onBeforeMount(getNextPhotos)
   </div>
 
 </template>
-
-<style scoped>
-
-.container {
-  padding: 0 40px;
-}
-
-</style>

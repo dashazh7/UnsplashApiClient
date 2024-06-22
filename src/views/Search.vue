@@ -45,11 +45,3 @@ onBeforeMount(imagesSearch);
     <GridPhoto :images="images"></GridPhoto>
   </div>
 </template>
-
-<style scoped>
-
-.container {
-  padding: 20px;
-}
-
-</style>

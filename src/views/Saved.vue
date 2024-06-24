@@ -2,7 +2,6 @@
 import {ref, onBeforeMount} from 'vue';
 import GridPhoto from "@/components/GridPhoto.vue";
 import { getFavorites } from "@/api/favorites/api.js";
-import {getRandomPhotos} from "@/api/unsplash/api.js";
 
 const savedImages = ref()
 

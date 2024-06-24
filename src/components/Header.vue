@@ -25,9 +25,9 @@ const isRouteActive = (routeName) => {
 </script>
 
 <template>
-  <header class="header">
+  <header class="container header">
     <div class="logo">Логотип</div>
-    <div class="links left-links">
+    <nav class="links left-links">
       <router-link to="/" class="link">
         <div class="link-content">
           <IconHome :fill="isRouteActive('home') ? 'white' : '#2C2C2C'" :stroke="isRouteActive('home') ? 'white' : '#2C2C2C'" class="link-icon"></IconHome>
@@ -40,7 +40,7 @@ const isRouteActive = (routeName) => {
           Избранное
         </div>
       </router-link>
-    </div>
+    </nav>
     <Search v-model="query" @search="onSearch"/>
     <div class="links right-links">
       <router-link to="/info" class="link">
@@ -56,10 +56,11 @@ const isRouteActive = (routeName) => {
 <style scoped>
 .header {
   display: flex;
+  gap: 32px;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px;
-  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .links {

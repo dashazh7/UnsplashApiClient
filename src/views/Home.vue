@@ -24,8 +24,8 @@ onBeforeMount(getNextPhotos)
 </script>
 
 <template>
-  <div class="container">
+  <main class="container">
     <GridPhoto :images="images"></GridPhoto>
-  </div>
+  </main>
 
 </template>

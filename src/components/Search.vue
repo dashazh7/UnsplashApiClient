@@ -15,15 +15,16 @@ const emit = defineEmits(['search'])
 
 .search {
   display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 input {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  line-height: 24px;
   background-color: #F1F1F1;
-  width: 1000px;
+  width: 100%;
   height: 45px;
   border: none;
   border-radius: 7px;

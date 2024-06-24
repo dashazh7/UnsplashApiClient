@@ -55,6 +55,10 @@ const isRouteActive = (routeName) => {
 
 <style scoped>
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
   display: flex;
   gap: 32px;
   align-items: center;

@@ -1,7 +1,7 @@
 <script setup>
 import {onBeforeMount, ref} from 'vue';
 import ButtonHeart from "@/components/ButtonHeart.vue";
-import { getFavorite, deleteFavorite, createFavorite } from "@/api/favorite.js";
+import { getFavorite, deleteFavorite, createFavorite } from "@/api/favorites/api.js";
 
 const isHover = ref(false)
 

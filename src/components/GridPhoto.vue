@@ -28,7 +28,7 @@ const itemsComputed = computed(() => {
     <template v-for="(chunk, i) in itemsComputed" :key="i">
       <div class="column">
         <template v-for="image in chunk" :key="image.id">
-          <Card :unsplashId="image.id" :url="image.urls.regular"/>
+          <Card :unsplashId="image.id" :url="image.url"/>
         </template>
       </div>
     </template>

@@ -1,7 +1,7 @@
 
 <script setup>
 import { ref, onBeforeMount, watch, onBeforeUnmount } from 'vue';
-import { searchPhotos } from "@/api/unsplash.js";
+import { searchPhotos } from "@/api/unsplash/api.js";
 import { useRoute } from 'vue-router';
 import GridPhoto from "@/components/GridPhoto.vue";
 

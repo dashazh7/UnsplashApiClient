@@ -2,7 +2,7 @@
 
 import GridPhoto from "@/components/GridPhoto.vue";
 import {onBeforeMount, onBeforeUnmount, ref} from 'vue'
-import { getPhotos, getRandomPhotos } from "@/api/unsplash.js";
+import { getRandomPhotos } from "@/api/unsplash/api.js";
 
 const images = ref([]);
 

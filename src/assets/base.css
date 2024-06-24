@@ -83,8 +83,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 .container {
-  padding: 0 40px;
+  padding: 0 calc(50% - 700px);
 }

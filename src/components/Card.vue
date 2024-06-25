@@ -73,5 +73,4 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-
 </style>

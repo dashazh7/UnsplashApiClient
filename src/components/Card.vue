@@ -2,8 +2,11 @@
 import {onBeforeMount, ref} from 'vue';
 import ButtonHeart from "@/components/ButtonHeart.vue";
 import { getFavorite, deleteFavorite, createFavorite } from "@/api/favorites/api.js";
+import ModalImage from "@/components/ModalImage.vue";
 
-const isHover = ref(false)
+const isHover = ref(false);
+const isAddedToFavorite = ref(false);
+const isModalShow = ref(false);
 
 const props = defineProps({
   unsplashId: String,
@@ -11,8 +14,6 @@ const props = defineProps({
   title: String,
   description: String
 })
-
-const isAddedToFavorite = ref(false)
 
 const addOrDeleteToFavorite = async () => {
   try {
@@ -25,21 +26,21 @@ const addOrDeleteToFavorite = async () => {
   } catch {}
 }
 
+
 onBeforeMount(async () => {
   try {
     await getFavorite(props.unsplashId)
     isAddedToFavorite.value = true
   } catch {}
 })
-
-
 </script>
 
 <template>
-<div class="card" @mouseenter="isHover=true" @mouseleave="isHover=false">
-  <img :src="url"/>
-  <ButtonHeart  v-show="isHover" v-model:isFavorite="isAddedToFavorite" @click="addOrDeleteToFavorite"></ButtonHeart>
-</div>
+  <div class="card" @mouseenter="isHover=true" @mouseleave="isHover=false" @click="isModalShow = true">
+    <img :src="url"/>
+    <ButtonHeart @click.stop v-show="isHover" v-model:isFavorite="isAddedToFavorite" @click="addOrDeleteToFavorite"></ButtonHeart>
+  </div>
+  <ModalImage v-model:show="isModalShow" :url="url"/>
 </template>
 
 <style scoped>

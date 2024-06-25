@@ -35,4 +35,5 @@ const showImageModal = defineModel("show");
   max-height: 90%;
   border-radius: 8px;
 }
+
 </style>

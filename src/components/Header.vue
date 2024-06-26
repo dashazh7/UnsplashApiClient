@@ -5,6 +5,7 @@ import {ref, watch} from "vue";
 import IconHeart from "@/components/icons/IconHeart.vue";
 import IconHome from "@/components/icons/IconHome.vue";
 import IconInfo from "@/components/icons/IconInfo.vue";
+import IconLogo from "@/components/icons/IconLogo.vue";
 
 const router = useRouter();
 const query = ref("");
@@ -26,7 +27,7 @@ const isRouteActive = (routeName) => {
 
 <template>
   <header class="container header">
-    <div class="logo">Логотип</div>
+    <IconLogo></IconLogo>
     <nav class="links left-links">
       <router-link to="/" class="link">
         <div class="link-content">

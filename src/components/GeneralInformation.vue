@@ -9,7 +9,6 @@
       Здесь вы можете <span>находить</span> и <span>сохранять</span> в избранное красивые фотографии с
       <a target="_blank" href="https://unsplash.com/">Unsplash</a>.
     </p>
-
     <img src="@/components/icons/info1.jfif" alt="">
     <img src="@/components/icons/info2.jfif" alt="">
   </div>
@@ -36,6 +35,7 @@ img {
   height: 200px;
   margin-right: 20px;
   border-radius: 8px;
+  padding-bottom: 30px;
 }
 
 a {

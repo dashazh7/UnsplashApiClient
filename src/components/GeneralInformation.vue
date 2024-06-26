@@ -10,8 +10,8 @@
       <a target="_blank" href="https://unsplash.com/">Unsplash</a>.
     </p>
 
-    <img src="@/components/icons/2.jfif" alt="">
-    <img src="@/components/icons/3.jfif" alt="">
+    <img src="@/components/icons/info1.jfif" alt="">
+    <img src="@/components/icons/info2.jfif" alt="">
   </div>
 </template>
 

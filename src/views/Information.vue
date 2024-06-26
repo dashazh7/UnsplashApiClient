@@ -1,168 +1,23 @@
 <script setup>
-
+import GeneralInformation from "@/components/GeneralInformation.vue";
+import ApplicationFunctions from "@/components/ApplicationFunctions.vue";
+import FrequentlyAskedQuestions from "@/components/FrequentlyAskedQuestions.vue";
+import ContactInformation from "@/components/ContactInformation.vue";
 </script>
 
 <template>
   <div class="container main-block">
-    <div class="about">
-      <h1>Добро пожаловать в наше приложение!</h1>
-      <p>Здесь вы можете <span>находить</span> и <span>сохранять</span> в избранное красивые фотографии с <a target="_blank" href="https://unsplash.com/">Unsplash</a>. </p>
-    </div>
-
-    <div class="functions">
-      <div>
-        <h2>Получение изображений</h2>
-        <p>При открытии приложения в <span>ленте</span> будут показаны случайные изображения из <a target="_blank" href="https://unsplash.com/">Unsplash</a>. Эти
-          изображения могут быть на <span>любую тему</span>: природа, путешествия, еда, животные, абстракции и многое другое.
-          Вы можете наслаждаться красотой и разнообразием каждого изображения, оно будет меняться при каждом вашем визите.
-          Вы можете искать изображения по ключевым словам: используйте функцию поиска, чтобы найти
-          изображения из определенной категории.
-        </p>
-      </div>
-
-      <div>
-        <h2>Поиск изображений</h2>
-        <p><span>Функция поиска</span> позволяет вам найти изображения по ключевым словам или фразам, которые вас интересуют.
-          Для этого вам нужно просто ввести интересующее вас слово или фразу в специальную поисковую строку в
-          приложении и нажать клавишу Enter. После этого приложение покажет вам изображения,
-          соответствующие вашему запросу.
-        </p>
-      </div>
-
-      <div>
-        <h2>Лайк изображений</h2>
-        <p>
-          Если вам понравилось изображение, вы можете <span>поставить лайк</span>, нажав на значок сердечка на изображении.
-          Это поможет вам сохранить изображение в качестве избранного, чтобы вы могли легко найти его в дальнейшем.
-          Понравившиеся изображения будут автоматически добавлены в ваш список избранного, который вы можете
-          просматривать и редактировать в любое время. Это удобно, если вы хотите сохранить изображения для
-          просмотра позже или поделиться ими с друзьями.
-        </p>
-      </div>
-
-      <div>
-        <h2>Избранное</h2>
-        <p>
-          Вы можете просмотреть все изображения, которые вам понравились, на <span>странице "Избранное"</span>.
-          Если вдруг вы передумали и решили удалить какое-то изображение из избранных, просто нажмите на значок
-          сердечка снова. После этого изображение будет удалено из вашего списка избранных, но останется доступным
-          в общем каталоге изображений.
-        </p>
-      </div>
-    </div>
-
-    <div class="faq">
-      <h2>Часто задаваемые вопросы (FAQ)</h2>
-
-      <div class="questions">
-        <p class="question">Q: Как добавить изображение в избранное?</p>
-        <p>A: Нажмите на значок сердечка на изображении. Изображение будет добавлено в ваш список избранного.</p>
-      </div>
-
-      <div class="questions">
-        <p class="question">Q: Как удалить изображение из избранного?</p>
-        <p>A: Перейдите на страницу "Избранное" и нажмите на значок сердечка на изображении, которое хотите удалить.</p>
-      </div>
-
-      <div class="questions">
-        <p class="question">Q: Как найти изображения по ключевым словам?</p>
-        <p>A: Введите ключевое слово или фразу в поисковую строку и нажмите клавишу Enter.
-          Вы увидите результаты, соответствующие вашему запросу.
-        </p>
-      </div>
-
-      <div class="questions">
-        <p class="question">Q: Что делать, если я не могу найти нужное изображение?</p>
-        <p>A: Попробуйте использовать разные ключевые слова или синонимы для вашего запроса.
-          Также вы можете обновить страницу с случайными изображениями, чтобы увидеть новые варианты.
-        </p>
-      </div>
-    </div>
-
-    <div class="info">
-      <h2>Связь с нами</h2>
-      <p>Если у вас есть вопросы или предложения, вы можете связаться с нами по
-        электронной почте:
-      </p>
-    </div>
+    <GeneralInformation></GeneralInformation>
+    <ApplicationFunctions></ApplicationFunctions>
+    <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
+    <ContactInformation></ContactInformation>
   </div>
-
 </template>
 
 <style scoped>
-
-a {
-  text-decoration: none;
-  color: #2c3e50;
-}
-
-a:hover {
-  color: #EA526F;
-}
-
-span {
-  font-weight: 600;
-  color: #EA526F;
-}
-
-p {
-  font-size: 18px;
-}
-
 .main-block {
   max-width: 1000px;
   margin: 0 auto;
   color: #2c3e50;
 }
-
-.about h1 {
-  margin-top: 30px;
-  font-size: 40px;
-  font-weight: 600;
-  color: #EA526F;
-}
-
-.about p {
-  margin-top: 30px;
-  padding-bottom: 30px;
-}
-
-.functions h2 {
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-weight: 600;
-  color: #EA526F;
-}
-
-.functions p {
-  padding-bottom: 30px;
-}
-
-.faq h2 {
-  margin-bottom: 30px;
-  font-size: 30px;
-  font-weight: 600;
-  color: #EA526F;
-}
-
-.questions {
-  padding-bottom: 20px;
-}
-
-.question {
-  font-weight: 600;
-  color: #EA526F;
-}
-
-.info h2 {
-  margin-bottom: 20px;
-  font-size: 30px;
-  font-weight: 600;
-  color: #EA526F;
-}
-
-.info {
-  padding-bottom: 50px;
-}
-
 </style>
